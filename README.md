@@ -82,8 +82,17 @@ Person person1 = new("Mohammed", "Hoque");
 Person person2 = person1 with { LastName = "XYZ" };
 // output: Person { FirstName = Mohammed, LastName = XYZ}
 ```
+
 ---
-## Example:
+## Inheritance (only for `record class` types)
+* A record can inherit from another record. However, a record can't inherit from a class, and a class can't inherit from a record.
+
+```csharp
+public abstract record Person(string FirstName, string LastName);
+public record Friend(string FirstName, string LastName, string EmailAddress): Person(FirstName, LastName)
+```
+---
+## Examples:
 
 ```csharp
 public record Person(string FirstName, string LastName);
