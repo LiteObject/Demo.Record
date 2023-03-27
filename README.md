@@ -2,7 +2,7 @@
 >The `record` keyword to define a reference type that provides built-in functionality for encapsulating data.
 >C# 10 allows the `record class` syntax as a synonym to clarify a reference type, and `record struct` to define a value type with similar functionality. 
 
-##The following two examples demonstrate `record` (or `record class`) reference types with _immutable_ properties by using positional parameters or standard property syntax:
+## The following two examples demonstrate `record` (or `record class`) reference types with _immutable_ properties by using positional parameters or standard property syntax:
 
 ```csharp
 // NOTE: Positional parameters (FirstName, LastName) start with uppercase
@@ -14,7 +14,7 @@ public record Person
     public string LastName { get; init; } = default!;
 };
 ```
-##The following two examples show `record struct` value types with _immutable_ properties and fields:
+## The following two examples show `record struct` value types with _immutable_ properties and fields:
 
 ```csharp
 public readonly record struct Point(double X, double Y, double Z);
@@ -26,7 +26,7 @@ public record struct Point
     public double Z {  get; init; }
 };
 ```
-##The following example shows `record` and `record struct` with _mutable_ properties and fields:
+## The following example shows `record` and `record struct` with _mutable_ properties and fields:
 
 ```csharp
 // Mutable because of setter
